@@ -1,0 +1,246 @@
+<DICTYPE html>
+<html>
+<body>
+
+<input type="text" id="num1">
+<input type="checkbox" id="box1">
+<br>
+<br>
+<input type="text" id="num2">
+<input type="checkbox" id="box2">
+<br>
+<br>
+<input type="text" id="num3">
+<input type="checkbox" id="box3">
+<br>
+<br>
+<button onclick="tambah()"> + </button>
+<button onclick="kurang()"> - </button>
+<button onclick="kali()"> x </button>
+<button onclick="bagi()"> : </button>
+<hr size="5px"width="35%" align="left">
+<h1>Hasil : </h1>
+<h1 id= "answer"> </h1>
+
+<script>
+
+function tambah(){
+	var field1 = document.getElementById("num1").value;
+	var field2 = document.getElementById("num2").value;
+	var field3 = document.getElementById("num3").value;
+	var field4 = document.getElementById("box1");
+	var field5 = document.getElementById("box2");
+	var field6 = document.getElementById("box3");
+	if(field4.checked && field5.checked  && !field6.checked)
+	{
+		var result = parseFloat(field1)+parseFloat(field2);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(!field4.checked && field5.checked && field6.checked)
+	{
+		var result = parseFloat(field2)+parseFloat(field3);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(field4.checked && !field5.checked && field6.checked)
+	{
+		var result = parseFloat(field1)+parseFloat(field3);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(field4.checked && field5.checked && field6.checked)
+	{
+		var result = parseFloat(field1)+parseFloat(field2)+parseFloat(field3);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(field4.checked && !field5.checked && !field6.checked)
+	{
+		document.getElementById("answer").innerHTML = "ERROR";
+	}
+	if(!field4.checked && field5.checked && !field6.checked)
+	{
+		document.getElementById("answer").innerHTML = "ERROR";
+	}
+	if(!field4.checked && !field5.checked && field6.checked)
+	{
+		document.getElementById("answer").innerHTML = "ERROR";
+	}
+	
+}
+
+function kurang(){
+	var field1 = document.getElementById("num1").value;
+	var field2 = document.getElementById("num2").value;
+	var field3 = document.getElementById("num3").value;
+	var field4 = document.getElementById("box1");
+	var field5 = document.getElementById("box2");
+	var field6 = document.getElementById("box3");
+	if(field4.checked && field5.checked  && !field6.checked)
+	{
+		var result = parseFloat(field1)-parseFloat(field2);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(!field4.checked && field5.checked && field6.checked)
+	{
+		var result = parseFloat(field2)-parseFloat(field3);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(field4.checked && !field5.checked && field6.checked)
+	{
+		var result = parseFloat(field1)-parseFloat(field3);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(field4.checked && field5.checked && field6.checked)
+	{
+		var result = parseFloat(field1)-parseFloat(field2)-parseFloat(field3);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(field4.checked && !field5.checked && !field6.checked)
+	{
+		document.getElementById("answer").innerHTML = "ERROR";
+	}
+	if(!field4.checked && field5.checked && !field6.checked)
+	{
+		document.getElementById("answer").innerHTML = "ERROR";
+	}
+	if(!field4.checked && !field5.checked && field6.checked)
+	{
+		document.getElementById("answer").innerHTML = "ERROR";
+	}
+	
+}
+
+
+function kali(){
+	var field1 = document.getElementById("num1").value;
+	var field2 = document.getElementById("num2").value;
+	var field3 = document.getElementById("num3").value;
+	var field4 = document.getElementById("box1");
+	var field5 = document.getElementById("box2");
+	var field6 = document.getElementById("box3");
+	if(field4.checked && field5.checked  && !field6.checked)
+	{
+		var result = parseFloat(field1)*parseFloat(field2);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(!field4.checked && field5.checked && field6.checked)
+	{
+		var result = parseFloat(field2)*parseFloat(field3);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(field4.checked && !field5.checked && field6.checked)
+	{
+		var result = parseFloat(field1)*parseFloat(field3);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(field4.checked && field5.checked && field6.checked)
+	{
+		var result = parseFloat(field1)*parseFloat(field2)*parseFloat(field3);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(field4.checked && !field5.checked && !field6.checked)
+	{
+		document.getElementById("answer").innerHTML = "ERROR";
+	}
+	if(!field4.checked && field5.checked && !field6.checked)
+	{
+		document.getElementById("answer").innerHTML = "ERROR";
+	}
+	if(!field4.checked && !field5.checked && field6.checked)
+	{
+		document.getElementById("answer").innerHTML = "ERROR";
+	}
+	
+}
+
+function bagi(){
+	var field1 = document.getElementById("num1").value;
+	var field2 = document.getElementById("num2").value;
+	var field3 = document.getElementById("num3").value;
+	var field4 = document.getElementById("box1");
+	var field5 = document.getElementById("box2");
+	var field6 = document.getElementById("box3");
+	if(field4.checked && field5.checked  && !field6.checked)
+	{
+		var result = parseFloat(field1)/parseFloat(field2);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(!field4.checked && field5.checked && field6.checked)
+	{
+		var result = parseFloat(field2)/parseFloat(field3);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(field4.checked && !field5.checked && field6.checked)
+	{
+		var result = parseFloat(field1)/parseFloat(field3);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(field4.checked && field5.checked && field6.checked)
+	{
+		var result = parseFloat(field1)/parseFloat(field2)/parseFloat(field3);
+		if(!isNaN(result))
+		{
+		document.getElementById("answer").innerHTML = result;
+		}
+	}
+	if(field4.checked && !field5.checked && !field6.checked)
+	{
+		document.getElementById("answer").innerHTML = "ERROR";
+	}
+	if(!field4.checked && field5.checked && !field6.checked)
+	{
+		document.getElementById("answer").innerHTML = "ERROR";
+	}
+	if(!field4.checked && !field5.checked && field6.checked)
+	{
+		document.getElementById("answer").innerHTML = "ERROR";
+	}
+	
+}
+</script>
+
+</body>
+</html>
